@@ -16,7 +16,16 @@ class SplashScreen extends StatelessWidget {
               width: 150, // Set the desired width
             ),
             SizedBox(height: 20),
+            Text(
+              'Your App Name',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 20),
             CircularProgressIndicator(),
+
           ],
         ),
       ),
