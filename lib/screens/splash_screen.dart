@@ -10,22 +10,36 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Replace the FlutterLogo with your custom logo
-            Image.asset(
-              'assets/images/logo.png',
-              width: 150, // Set the desired width
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Your App Name',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    'assets/images/logo.png',
+                    width: 150, // Set the desired width
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Your App Name',
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 20),
-            CircularProgressIndicator(),
-
+            Container(
+              margin: EdgeInsets.only(bottom: 16.0),
+              child: Text(
+                '© 2023 Your App. All rights reserved.',
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
           ],
         ),
       ),
